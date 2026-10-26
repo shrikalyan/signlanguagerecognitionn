@@ -1,0 +1,26 @@
+@import '@fontsource/atkinson-hyperlegible/400.css';
+@import '@fontsource/atkinson-hyperlegible/700.css';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --color-ink: #0a101c;
+  --color-panel: #101828;
+  --color-raised: #172238;
+  --color-line: #25324b;
+  --color-text: #e8eef9;
+  --color-muted: #9fb0cc;
+  --color-teal: #2dd4bf;
+  --color-teal-dim: #134e4a;
+  --color-warn: #fbbf24;
+  --color-bad: #fb7185;
+}
+
+html, body, #root { min-height: 100%; }
+body { background: var(--color-ink); color: var(--color-text); font-family: var(--font-sans); }
+
+:focus-visible { outline: 3px solid var(--color-teal); outline-offset: 2px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
